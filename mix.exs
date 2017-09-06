@@ -61,7 +61,10 @@ defmodule NervesCam.Mixfile do
     [
       {:bootloader, "~> 0.1"},
       {:nerves_runtime, "~> 0.4"},
-      {:nerves_init_gadget, "~> 0.2"}
+      {:nerves_init_gadget, "~> 0.2"},
+      {:picam, "~> 0.1"},
+      {:cowboy, "~> 1.0.0"},
+      {:plug, "~> 1.0"}
     ] ++ system(target)
   end
 
