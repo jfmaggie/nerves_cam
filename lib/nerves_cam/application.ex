@@ -8,7 +8,8 @@ defmodule NervesCam.Application do
 
     # Define workers and child supervisors to be supervised
     children = [
-      # worker(NervesCam.Worker, [arg1, arg2, arg3]),
+      worker(Picam.Camera, []),
+      Plug.Adapters.Cowboy.child_spec(:http, NervesCam.Router, [], [port: 80])
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html
